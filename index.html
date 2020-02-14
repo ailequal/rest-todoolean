@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"
+		integrity="sha256-/PJBs6QWvXijOFIX04kZpLb6ZtSQckdOIavLWKKOgXU=" crossorigin="anonymous"></script>
+	<title>rest-todoolean</title>
+</head>
+
+<body>
+	<header>
+		<h1>rest-todoolean</h1>
+	</header>
+	<main>
+		<div class="container">
+			<h2>to-do list</h2>
+			<ul class="to-do-list">
+				<li>Static list item<div class="action"><span class="check">&check;</span> <span class="cross">&cross;</span>
+					</div>
+				</li>
+			</ul>
+			<div class="add">
+				<label for="item">Add a to-do (with enter):</label>
+				<input type="text" id="item" name="item">
+			</div>
+		</div>
+	</main>
+	<footer>
+		<!-- empty -->
+	</footer>
+	<script id="template" type="text/x-handlebars-template">
+		<li>
+			{{toDo}}
+			<div class="action"><span class="check">&check;</span> <span class="cross">&cross;</span></div>
+		</li>
+	</script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
