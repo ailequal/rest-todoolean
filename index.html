@@ -19,13 +19,21 @@
 		<div class="container">
 			<h2>to-do list</h2>
 			<ul class="to-do-list">
-				<li>Static list item<div class="action"><span class="check">&check;</span> <span class="cross">&cross;</span>
+				<li>Static list item
+					<div class="action">
+						<span class="check">&check;</span>
+						<span class="select">&micro;</span>
+						<span class="cross">&cross;</span>
 					</div>
 				</li>
 			</ul>
-			<div class="add">
+			<div class="add box">
 				<label for="item">Add a to-do (with enter):</label>
 				<input type="text" id="item" name="item">
+			</div>
+			<div class="update box">
+				<label for="item">Update selected to-do (with enter):</label>
+				<input type="text" id="updates" name="item">
 			</div>
 		</div>
 	</main>
@@ -35,7 +43,11 @@
 	<script id="template" type="text/x-handlebars-template">
 		<li id-attribute="{{idAttribute}}">
 			{{toDo}}
-			<div class="action"><span class="check">&check;</span> <span class="cross">&cross;</span></div>
+			<div class="action">
+				<span class="check">&check;</span>
+				<span class="select">&micro;</span>
+				<span class="cross">&cross;</span>
+			</div>
 		</li>
 	</script>
 	<script src="js/script.js"></script>

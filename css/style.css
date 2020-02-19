@@ -1,84 +1,88 @@
 /* general */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  min-width: 576px;
-  background-color: yellow;
-  font-family: sans-serif;
-  font-size: 16px;
+	min-width: 576px;
+	background-color: yellow;
+	font-family: sans-serif;
+	font-size: 16px;
 }
 
 /* main */
 h1,
 h2 {
-  margin: 10px;
-  text-align: center;
+	margin: 10px;
+	text-align: center;
 }
 
 .container {
-  padding: 5px;
-  background-color: red;
+	padding: 5px;
+	background-color: red;
 }
 
 ul {
-  width: 400px;
-  margin: auto;
-  padding: 0 0 0 20px;
-  background-color: brown;
+	width: 400px;
+	margin: auto;
+	padding: 0 0 0 20px;
+	background-color: brown;
 }
 
 li {
-  position: relative;
-  margin: 5px;
-  padding: 0 80px 0 0;
-  font-size: 20px;
-  line-height: 20px;
+	position: relative;
+	margin: 5px;
+	padding: 0 80px 0 0;
+	font-size: 20px;
+	line-height: 20px;
 }
 
 li:hover {
-  background-color: lightblue;
+	background-color: lightblue;
 }
 
 li:hover span {
-  display: inline;
-  margin: auto 10px;
+	display: inline;
+	margin: auto 10px;
 }
 
 .action {
-  position: absolute;
-  display: inline-block;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background-color: yellow;
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	background-color: yellow;
 }
 
 span {
-  display: none;
-  cursor: pointer;
+	display: none;
+	cursor: pointer;
 }
 
-.add {
-  width: 200px;
-  margin: 10px auto;
+.box {
+	width: 200px;
+	margin: 10px auto;
 }
 
-.add label {
-  display: block;
-  margin: 5px;
-  text-align: center;
+.box label {
+	display: block;
+	margin: 5px;
+	text-align: center;
 }
 
-.add input {
-  display: block;
-  width: 200px;
+.box input {
+	display: block;
+	width: 200px;
 }
 
 /* toggles */
 .line-through {
-  text-decoration: line-through;
+	text-decoration: line-through;
+}
+
+.selected {
+	background-color: blue;
 }

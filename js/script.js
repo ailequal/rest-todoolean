@@ -15,6 +15,28 @@ $(document).ready(function () {
 		}
 	});
 
+	// store selected to-do id
+	var idAttribute = 0;
+	$(document).on('click', '.select', function () {
+		$('li').removeClass('selected');
+		$(this).closest('li').addClass('selected');
+		idAttribute = $(this).closest('li').attr('id-attribute');
+		console.log(idAttribute);
+	});
+
+	// update to-do with enter key and refresh the to-do list
+	$(document).on('keydown', '#updates', function () {
+		if (event.which === 13) {
+			var newText = $(this).val();
+			console.log(idAttribute);
+			console.log('newText', newText);
+			$(this).val('');
+			updateToDo(idAttribute, newText);
+			// refresh the to-do
+			setTimeout(printToDo, 500);
+		}
+	});
+
 	// delete the selected to-do
 	$(document).on('click', '.cross', function () {
 		var id = $(this).closest('li').attr('id-attribute');
@@ -79,12 +101,13 @@ $(document).ready(function () {
 	}
 
 	// add a new to-do to the server
-	function updateToDo(updatedToDo) {
+	function updateToDo(idAttribute, newText) {
 		$.ajax({
-			url: "http://157.230.17.132:3027/todos/" + x,
+			url: "http://157.230.17.132:3027/todos/" + idAttribute,
 			method: "PATCH",
 			data: {
-				text: updatedToDo,
+				id: idAttribute,
+				text: newText
 			},
 			success: function (data, state) {
 				console.log('updateToDo()', data);
